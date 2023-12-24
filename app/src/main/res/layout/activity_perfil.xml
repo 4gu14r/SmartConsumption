@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="25dp"
+    tools:context=".ui.configuracao.perfil.PerfilActivity">
+
+    <TextView
+        android:id="@+id/txtNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ediTxtNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text=""
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/txtNome" />
+
+    <TextView
+        android:id="@+id/txtSobre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sobrenome"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/ediTxtNome" />
+
+    <EditText
+        android:id="@+id/ediTxtSobre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text=""
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/txtSobre" />
+
+    <TextView
+        android:id="@+id/txtNasc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data de Nascimento"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/ediTxtSobre" />
+
+    <EditText
+        android:id="@+id/ediTxtNasc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:inputType="date"
+        android:text=""
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/txtNasc" />
+
+
+    <LinearLayout
+        android:id="@+id/containerSexo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/ediTxtNasc">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Sexo"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="25dp" />
+
+        <RadioGroup
+            android:id="@+id/sexo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RadioButton
+                android:id="@+id/feminino"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/container_components"
+                android:enabled="false"
+                android:textColor="@color/gray_600"
+                android:text="Feminino" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/masculino"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/container_components"
+                android:enabled="false"
+                android:textColor="@color/gray_600"
+                android:text="Masculino" />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/textConta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/container_components"
+        android:fontFamily="sans-serif-black"
+        android:text="Conta"
+        android:textAlignment="center"
+        android:textColor="@color/gray"
+        android:textSize="22sp"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintTop_toBottomOf="@+id/containerSexo"
+        tools:layout_editor_absoluteX="25dp" />
+
+    <RelativeLayout
+        android:id="@+id/Conta"
+        style="@style/ContainerComponents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/textConta">
+
+        <EditText
+            android:id="@+id/editTxtEmail"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableRight="@drawable/baseline_email_24"
+            android:enabled="false"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:text=""
+            android:textColor="@color/gray" />
+
+        <EditText
+            android:id="@+id/editTxtSenhaAtual"
+            style="@style/EditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTxtEmail"
+            android:layout_marginTop="10dp"
+            android:drawableRight="@drawable/baseline_remove_red_eye_24"
+            android:enabled="false"
+            android:textColorHint="@color/gray_600"
+            android:hint="Nova Senha"
+            android:inputType="textPassword"
+            android:maxLength="8"
+            android:text="P@s5W0rd3"
+            android:textColor="@color/gray" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/buttonEditUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:backgroundTint="@color/dark_red"
+        android:text="Editar"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintTop_toBottomOf="@+id/Conta"
+        tools:layout_editor_absoluteX="25dp" />
+
+    <Button
+        android:id="@+id/buttonSaveUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Salvar"
+        android:visibility="invisible"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintTop_toBottomOf="@+id/Conta"
+        tools:layout_editor_absoluteX="25dp" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progBar"
+        android:visibility="invisible"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonSaveUser" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

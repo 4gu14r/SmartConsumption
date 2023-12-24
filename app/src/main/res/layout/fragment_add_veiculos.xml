@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="25dp"
+    tools:context=".ui.configuracao.veiculos.AddVeiculosFragment">
+
+    <TextView
+        android:id="@+id/txtMarca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Marca"
+        android:textColor="#BEFFFFFF"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputMarca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Seleciona a marca"
+        app:layout_constraintTop_toBottomOf="@id/txtMarca"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_marca_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#BEFFFFFF"
+            android:inputType="none"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txtModelo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Modelo"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/txtInputMarca" />
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputModelo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Seleciona o modelo"
+        app:layout_constraintTop_toBottomOf="@id/txtModelo"
+        android:textColor="@color/white"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_modelo_complete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#BEFFFFFF"
+            android:inputType="none"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txtHodometro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hodômetro"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/txtInputModelo" />
+
+    <EditText
+        android:id="@+id/ediTxtHodometro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hodômetro Atual"
+        android:textSize="18sp"
+        android:textColorHint="@color/gray_400"
+        android:textColor="@color/white"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/txtHodometro" />
+
+    <TextView
+        android:id="@+id/txtConsumo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Consumo"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/ediTxtHodometro" />
+
+    <EditText
+        android:id="@+id/ediTxtConsumo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Consumo Médio"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:textColorHint="@color/gray_400"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/txtConsumo" />
+
+    <TextView
+        android:id="@+id/txtTanque"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tanque"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/ediTxtConsumo" />
+
+    <EditText
+        android:id="@+id/ediTxtTanque"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Volume do tanque"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:textColorHint="@color/gray_400"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/txtTanque" />
+
+
+    <LinearLayout
+        android:id="@+id/containerMotor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/ediTxtHodometro">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Combustão do Motor"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/dtNascimento"
+            tools:layout_editor_absoluteX="25dp" />
+
+        <RadioGroup
+            android:id="@+id/combustivel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RadioButton
+                android:id="@+id/gasolina"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/container_components"
+                android:textColor="@color/gray_600"
+                android:text="Gasolina" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/flex"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/container_components"
+                android:textColor="@color/gray_600"
+                android:text="Flex" />
+
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/diesel"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/container_components"
+                android:textColor="@color/gray_600"
+                android:text="Diesel" />
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonAdicionarVeiculo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Adicionar"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintTop_toBottomOf="@+id/containerMotor"
+        tools:layout_editor_absoluteX="25dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

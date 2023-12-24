@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "463260189588",
+    "project_id": "smart-consumption-sc404",
+    "storage_bucket": "smart-consumption-sc404.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:463260189588:android:bb756e35e801242c0dc581",
+        "android_client_info": {
+          "package_name": "com.application.smartconsumption"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "463260189588-7sbbm313lco19afmdhbghsg2k4pa772h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9ZluIpQR2JpavOeSiKC1PiEd21gG9taI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "463260189588-7sbbm313lco19afmdhbghsg2k4pa772h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

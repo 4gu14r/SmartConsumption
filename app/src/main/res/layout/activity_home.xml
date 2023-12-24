@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_investido"
+    android:padding="20dp"
+    tools:context=".ui.home.HomeActivity">
+
+    <TextView
+        android:id="@+id/marca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marca"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/modelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Modelo"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/marca" />
+
+    <TextView
+        android:id="@+id/data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="23/03/2023"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/hora"
+        app:layout_constraintTop_toBottomOf="@id/modelo"/>
+
+    <TextView
+        android:id="@+id/hora"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="15:03"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/modelo"/>
+
+    <TextView
+        android:id="@+id/hodometro"
+        style="@style/EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Quilômetros Percorridos"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/data" />
+
+    <TextView
+        android:id="@+id/ctn_hodometro"
+        style="@style/EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="102.568 Km"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hodometro" />
+
+    <TextView
+        android:id="@+id/tanque"
+        style="@style/EditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Litros"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="0dp"
+        app:layout_constraintEnd_toStartOf="@id/consumo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ctn_hodometro" />
+
+    <EditText
+        android:id="@+id/ctn_tanqueEnable"
+        style="@style/Disabled"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="40L"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:padding="0dp"
+        app:layout_constraintEnd_toStartOf="@id/ctn_consumo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tanque" />
+
+
+
+    <EditText
+        android:id="@+id/ctn_tanqueDisable"
+        style="@style/EditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="40L"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:padding="0dp"
+        android:visibility="gone"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@id/ctn_consumo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tanque" />
+
+    <TextView
+        android:id="@+id/consumo"
+        style="@style/EditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Consumo"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/tanque"
+        app:layout_constraintTop_toBottomOf="@id/ctn_hodometro" />
+
+    <TextView
+        android:id="@+id/ctn_consumo"
+        style="@style/EditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="12Km/L"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/ctn_tanqueEnable"
+        app:layout_constraintTop_toBottomOf="@+id/tanque" />]
+
+    <TextView
+        android:id="@+id/preco_gasto"
+        style="@style/EditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Preço Gasto"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="0dp"
+        app:layout_constraintEnd_toStartOf="@id/valor_gasosa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ctn_tanqueEnable" />
+
+    <TextView
+        android:id="@+id/valor_gasosa"
+        style="@style/EditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="0dp"
+        android:text="Valor"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/preco_gasto"
+        app:layout_constraintTop_toBottomOf="@id/ctn_tanqueEnable" />
+
+
+
+    <EditText
+        android:id="@+id/ctn_precoGastoDisable"
+        style="@style/EditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="R$: "
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:padding="0dp"
+        android:visibility="gone"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@id/ctn_valorGasosaDisable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/preco_gasto" />
+
+    <EditText
+        android:id="@+id/ctn_valorGasosaDisable"
+        style="@style/EditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="R$: "
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:padding="0dp"
+        android:visibility="gone"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/ctn_precoGastoDisable"
+        app:layout_constraintTop_toBottomOf="@+id/valor_gasosa" />
+
+
+    <EditText
+        android:id="@+id/ctn_precoGastoEnable"
+        style="@style/Disabled"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="R$: 5,41"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:padding="0dp"
+        app:layout_constraintEnd_toStartOf="@id/ctn_valorGasosaEnable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/preco_gasto" />
+
+    <EditText
+        android:id="@+id/ctn_valorGasosaEnable"
+        style="@style/Disabled"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="R$: 47,87"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/ctn_precoGastoEnable"
+        app:layout_constraintTop_toBottomOf="@+id/valor_gasosa" />
+
+
+
+    <TextView
+        android:id="@+id/combustivel"
+        style="@style/EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="0dp"
+        android:text="Combustível"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ctn_precoGastoEnable" />
+
+    <TextView
+        android:id="@+id/ctn_combustivel"
+        style="@style/EditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="Gasolina"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:padding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/combustivel" />
+
+    <Button
+        android:id="@+id/btEditar"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/red"
+        android:text="Editar"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btSalvar"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginBottom="50dp"
+        android:text="Salvar"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
